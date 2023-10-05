@@ -18,8 +18,7 @@ class CreateMembersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('address');
-            $table->unsignedBigInteger('employee_id');
-            $table->foreign('employee_id')->references('employee_id')->on('employee');
+           
         });
     }
 

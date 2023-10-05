@@ -5,6 +5,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserAuth;
 
 // use Illuminate\Support\Facades\Route;
@@ -12,6 +13,9 @@ use App\Http\Controllers\UserAuth;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view("upload",'/upload');
+Route::post("upload",[UploadController::class,'index']);
 
 Route::get("list",[EmployeeController::class,'getData']);
 
