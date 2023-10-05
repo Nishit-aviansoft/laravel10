@@ -4,27 +4,29 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\MemberController;
-
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UserAuth;
 
 // use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('list',[MemberController::class,'list']);
+Route::get("list",[EmployeeController::class,'getData']);
+
+// Route::get('list',[MemberController::class,'list']);
 Route::get('delete/{id}',[MemberController::class,'delete']);
 Route::get('edit/{id}',[MemberController::class,'showData']);
 Route::post('edit',[MemberController::class,'update']);
 
-
+// Route::get('list',[UsersController::class,'operations']);
 
 // Route::get('users',[UsersController::class,'index']);
 
-// // Route::get('list',[MemberController::class,'show']);
-// Route::post('add',[MemberController::class,'addData']);
-// Route::view('add','addmember');
+// Route::get('list',[MemberController::class,'show']);
+Route::post('add',[MemberController::class,'addData']);
+Route::view('add','addmember');
 
 // Route::get('/profile/{lang}', function ($lang) {
 //     App::setlocale($lang);
@@ -56,7 +58,7 @@ Route::post('edit',[MemberController::class,'update']);
 // Route::post("storecontroller",[StoreController::class,'storeM']);
 
 
-// Route::resource('products', ProductController::class);
+Route::resource('products', ProductController::class);
 
 // Route::view("index",'/index');
 // Route::view("about",'/about');

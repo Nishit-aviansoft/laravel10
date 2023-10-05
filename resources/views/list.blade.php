@@ -1,4 +1,4 @@
-<h1>Member List</h1>
+{{-- <h1>Member List</h1>
 <table border="1">
 <tr>
     <td>ID</td>
@@ -22,7 +22,7 @@
 </tr>
 @endforeach
 
-</table>
+</table> --}}
 {{-- <div>
     {{$members->links()}}
 </div>
@@ -32,3 +32,17 @@
         display: none
     }
 </style> --}}
+
+
+{{-- <table border="1">
+   
+    @foreach ($data as $item)
+    <tr>
+        <td>{{$item->id}}</td>
+        <td>{{$item->name}}</td>
+        <td>{{$item->email}}</td>
+        <td>{{$item->address}}</td>
+    </tr>
+    @endforeach
+    
+    </table> --}}

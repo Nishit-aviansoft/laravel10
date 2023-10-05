@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
+use Illuminate\Support\Facades\DB;
 
 class MemberController extends Controller
 {
@@ -44,9 +45,18 @@ class MemberController extends Controller
     function update(Request $request)
     {
         $data = Member::find($request->id);
-        $data -> name=$request->name;
-        $data -> email=$request->email;
-        $data -> address=$request->address;
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->address=$request->address;
+        $data->save();
         return redirect('list');
+    }
+
+    function operations()
+    {
+        return DB::table('members')
+        ->where('id',21)->delete();
+        
+        
     }
 }

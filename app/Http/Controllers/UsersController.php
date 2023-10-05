@@ -33,4 +33,9 @@ class UsersController extends Controller
 //        ]);
 //        return $request->input();
 //    }
+
+       function operations()
+       {
+            return DB::table('members')->max('name');
+       } 
 }
