@@ -68,6 +68,7 @@ class MemberController extends Controller
         $member = new Member;
         $member->name="bruce";
         $member->email="bruce@gmail.com";
-        $member->address="USA";
+        $member->address="Mumbai";
+        $member->save();
     }
 }

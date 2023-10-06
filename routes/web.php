@@ -14,12 +14,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('data',[EmployeeController::class,'index']);
+
 Route::get('member',[MemberController::class,'index']);
 
 Route::view("upload",'/upload');
 Route::post("upload",[UploadController::class,'index']);
 
-Route::get("list",[EmployeeController::class,'getData']);
+// Route::get("list",[EmployeeController::class,'getData']);
 
 // Route::get('list',[MemberController::class,'list']);
 Route::get('delete/{id}',[MemberController::class,'delete']);
