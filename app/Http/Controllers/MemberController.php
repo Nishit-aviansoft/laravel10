@@ -56,7 +56,18 @@ class MemberController extends Controller
     {
         return DB::table('members')
         ->where('id',21)->delete();
-        
-        
+    }
+
+    // function index()
+    // {
+    //     return Member::all();
+    // }
+
+    function index()
+    {
+        $member = new Member;
+        $member->name="bruce";
+        $member->email="bruce@gmail.com";
+        $member->address="USA";
     }
 }

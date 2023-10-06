@@ -14,6 +14,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('member',[MemberController::class,'index']);
+
 Route::view("upload",'/upload');
 Route::post("upload",[UploadController::class,'index']);
 
