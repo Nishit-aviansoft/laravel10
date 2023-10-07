@@ -62,3 +62,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Installation
+
+Clone the Repo:
+> git clone https://github.com/tauseedzaman/hospitalMS.git
+> cd hospitalMS
+> composer install
+> cp .env.example .env
+> Set up .env file
+> php artisan key:generate
+> php artisan storage:link
+> php artisan migrate:fresh --seed
+> php artisan serve
+http://127.0.0.1:8000/
