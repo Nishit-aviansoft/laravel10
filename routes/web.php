@@ -14,6 +14,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get("list",[ProductController::class,'list']);
+
 // Route::get('data',[EmployeeController::class,'index']);
 
 Route::get('member',[MemberController::class,'index']);
@@ -30,7 +32,7 @@ Route::post('edit',[MemberController::class,'update']);
 
 // Route::get('list',[UsersController::class,'operations']);
 
-// Route::get('users',[UsersController::class,'index']);
+// Route::get('/users',[UsersController::class,'index']);
 
 // Route::get('list',[MemberController::class,'show']);
 Route::post('add',[MemberController::class,'addData']);

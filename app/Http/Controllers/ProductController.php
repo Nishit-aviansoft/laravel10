@@ -4,9 +4,87 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Validator;
 
 class ProductController extends Controller
 {
+    function list()
+    {
+//        return DB::table('members')->get();
+        return DB::connection('mysql2')->table('cruds')->get();
+    }
+
+//    function add(Request $request)
+//    {
+//        $product = new Product;
+//        $product->name = $request->name;
+//        $product->detail = $request->detail;
+//        $product->image = $request->image;
+//        $result = $product->save();
+//
+//        if ($result) {
+//            return ["result"=>"Data has been Saved"];
+//        } else {
+//            return ["result"=>"Operation Failed"];
+//        }
+//    }
+//
+//    function update(Request $request)
+//    {
+//        $product = Product::find($request->id);
+//        $product->name = $request->name;
+//        $product->detail = $request->detail;
+//        $product->image = $request->image;
+//        $result = $product->save();
+//
+//        if ($result) {
+//            return ["Result"=>"Data has been Updated "];
+//        } else {
+//            return ["Result"=>"Operastion Failed"];
+//        }
+//    }
+//
+//    function search($name)
+//    {
+//        return Product::where("name","like","%".$name."%")->get();//where method
+//    }
+//
+//    function testData(Request $request)
+//    {
+//        $rules=array(
+//            // "id"=>"required | max:3",
+//            "name"=>"required"
+//        );
+//
+//        $validator = Validator::make($request->all(),$rules);
+//
+//        if ($validator->fails()) {
+//            return $validator->errors();
+//        } else {
+//            // return ["a"=>"x"];
+//
+//            $product = new Product;
+//            $product->name = $request->name;
+//            $product->detail = $request->detail;
+//            $product->image = $request->image;
+//            $result = $product->save();//$result variable
+//
+//            if ($result) {
+//                return ["result"=>"Data has been Saved"];
+//            } else {
+//                return ["result"=>"Operation Failed"];
+//            }
+//
+//        }
+//    }
+//
+//
+//    function list($id=null)
+//    {
+//        return $id?Product::find($id):Product::all();//find method
+//    }
+
     /**
      * Display a listing of the resource.
      *
@@ -88,29 +166,29 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
-    {
-        $request->validate([
-            'name' => 'required',
-            'detail' => 'required'
-        ]);
+    // public function update(Request $request, Product $product)
+    // {
+    //     $request->validate([
+    //         'name' => 'required',
+    //         'detail' => 'required'
+    //     ]);
 
-        $input = $request->all();
+    //     $input = $request->all();
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }else{
-            unset($input['image']);
-        }
+    //     if ($image = $request->file('image')) {
+    //         $destinationPath = 'image/';
+    //         $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+    //         $image->move($destinationPath, $profileImage);
+    //         $input['image'] = "$profileImage";
+    //     }else{
+    //         unset($input['image']);
+    //     }
 
-        $product->update($input);
+    //     $product->update($input);
 
-        return redirect()->route('products.index')
-            ->with('success','Product updated successfully');
-    }
+    //     return redirect()->route('products.index')
+    //         ->with('success','Product updated successfully');
+    // }
 
     /**
      * Remove the specified resource from storage.

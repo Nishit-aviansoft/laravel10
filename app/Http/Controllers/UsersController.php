@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+// use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
-    
+
     // function index()
     // {
     //     return DB::select("select * from products");
@@ -20,7 +20,7 @@ class UsersController extends Controller
     //     return redirect('profile');
     // }
 //    function index(){
-//
+
 //        $data = Http::get("https://reqres.in/api/users?page=1");
 //        return view('users',['collection'=>$data['data']]);
 //    }
@@ -37,9 +37,9 @@ class UsersController extends Controller
     //    function operations()
     //    {
     //         return DB::table('members')->max('name');
-    //    } 
-          function index(Request $req)
-          {
-            
-          }
+    //    }
+//           function index(Request $req)
+//           {
+
+//           }
 }

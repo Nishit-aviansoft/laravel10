@@ -1,5 +1,5 @@
 {{--<x-header componentName="Users" />--}}
-<h1>user login</h1>
+<h1>user list</h1>
 
 {{--<form action="/users" method="POST">--}}
 {{--@csrf--}}
@@ -10,25 +10,25 @@
 {{--<button type="submit">Login </button>--}}
 {{--</form>--}}
 
-{{--<table border="1">--}}
-{{--<tr>--}}
-{{--    <td>ID</td>--}}
-{{--    <td>Email</td>--}}
-{{--    <td>First Name</td>--}}
-{{--    <td>Last Name</td>--}}
-{{--    <td>Profile Photo</td>--}}
+{{-- <table border="1">
+<tr>
+   <td>ID</td>
+   <td>Email</td>
+   <td>First Name</td>
+   <td>Last Name</td>
+   <td>Profile Photo</td>
+</tr> --}}
 
-{{--</tr>--}}
-{{--@foreach($collection as $users)--}}
-{{--        <tr>--}}
-{{--            <td>{{$users['id']}}</td>--}}
-{{--            <td>{{$users['email']}}</td>--}}
-{{--            <td>{{$users['first_name']}}</td>--}}
-{{--            <td>{{$users['last_name']}}</td>--}}
-{{--            <td> <img src="{{$users['avatar']}}"></td>--}}
-{{--        </tr>--}}
-{{--    @endforeach--}}
-{{--</table>--}}
+{{-- @foreach($collection as $users)
+       <tr>
+           <td>{{$users['id']}}</td>
+           <td>{{$users['email']}}</td>
+           <td>{{$users['first_name']}}</td>
+           <td>{{$users['last_name']}}</td>
+           <td> <img src="{{$users['avatar']}}"></td>
+       </tr>
+   @endforeach
+</table> --}}
 
 
 {{--<form action="users" method="POST">--}}

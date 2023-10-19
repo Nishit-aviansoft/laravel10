@@ -8,7 +8,8 @@ class FileController extends Controller
 {
     function upload(Request $request)
     {
-        return $request->file('file')->store('apiDocs');
+        $result = $request->file('file')->store('apiDocs');
+        return ['result'=>$result];
     }
     /**
      * Display a listing of the resource.
