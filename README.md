@@ -68,22 +68,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Installation
 
 Clone the Repo:
--git clone https://github.com/tauseedzaman/hospitalMS.git
+git clone https://github.com/tauseedzaman/hospitalMS.git
 
--cd hospitalMS
+cd hospitalMS
 
--composer install
+composer install
 
--npm install
+npm install
 
--cp .env.example .env
+cp .env.example .env
 
--php artisan key:generate
+php artisan key:generate
 
--php artisan storage:link
+php artisan storage:link
 
--php artisan migrate:fresh --seed
+php artisan migrate:fresh --seed
 
--php artisan serve**
+php artisan serve
 
 
